@@ -1,14 +1,17 @@
+import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import { store } from "./redux/configStore";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UseStateDemo from "./page/HookDemo/UseState/UseStateDemo";
 import UseEffectDemo from "./page/HookDemo/UseEffect/UseEffectDemo";
 import BaiTapChonXe from "./page/HookDemo/UseState/BaiTapChonXe";
-import { Provider } from "react-redux";
-import { store } from "./redux/configStore";
 import UseCallBackDemo from "./page/HookDemo/UseCallBackDemo/UseCallBackDemo";
+import UseMemoDemo from "./page/HookDemo/UseMemoDemo/UseMemoDemo";
+import UseRefDemo from "./page/HookDemo/UseRef/UseRefDemo";
+import NumberDemo from "./page/HookDemo/useRedux/numberDemo/NumberDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +23,9 @@ root.render(
           <Route path="useeffectdemo" element={<UseEffectDemo />}></Route>
           <Route path="baitapchonxe" element={<BaiTapChonXe />}></Route>
           <Route path="usecallbackdemo" element={<UseCallBackDemo />}></Route>
+          <Route path="usememodemo" element={<UseMemoDemo />}></Route>
+          <Route path="userefdemo" element={<UseRefDemo />}></Route>
+          <Route path="numberdemo" element={<NumberDemo />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

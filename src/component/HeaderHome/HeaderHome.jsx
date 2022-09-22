@@ -44,8 +44,19 @@ export default function HeaderHome() {
                 </NavLink>
                 <NavLink className="dropdown-item" to={"/baitapchonxe"}>
                   Bài Tập Chọn Xe
-                </NavLink><NavLink className="dropdown-item" to={"/usecallbackdemo"}>
-                  UseCallBack Demo                </NavLink>
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/usecallbackdemo"}>
+                  UseCallBack Demo
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/usememodemo"}>
+                  UseMemo Demo
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/userefdemo"}>
+                  UseRef Demo
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/numberdemo"}>
+                  UseRedux - NumberDemo
+                </NavLink>
               </div>
             </li>
           </ul>
