@@ -12,6 +12,8 @@ import UseCallBackDemo from "./page/HookDemo/UseCallBackDemo/UseCallBackDemo";
 import UseMemoDemo from "./page/HookDemo/UseMemoDemo/UseMemoDemo";
 import UseRefDemo from "./page/HookDemo/UseRef/UseRefDemo";
 import NumberDemo from "./page/HookDemo/useRedux/numberDemo/NumberDemo";
+import DemoFaceBookApp from "./page/HookDemo/useRedux/DemoFacebookApp/DemoFaceBookApp";
+import LoginDemo from "./page/HookDemo/UseHookRouter/LoginDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,6 +28,8 @@ root.render(
           <Route path="usememodemo" element={<UseMemoDemo />}></Route>
           <Route path="userefdemo" element={<UseRefDemo />}></Route>
           <Route path="numberdemo" element={<NumberDemo />}></Route>
+          <Route path="facebookdemo" element={<DemoFaceBookApp />}></Route>
+          <Route path="logindemo" element={<LoginDemo />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

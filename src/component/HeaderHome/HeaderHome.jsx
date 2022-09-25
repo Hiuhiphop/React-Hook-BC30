@@ -57,6 +57,11 @@ export default function HeaderHome() {
                 <NavLink className="dropdown-item" to={"/numberdemo"}>
                   UseRedux - NumberDemo
                 </NavLink>
+                <NavLink className="dropdown-item" to={"/facebookdemo"}>
+                  Facebook Demo
+                </NavLink><NavLink className="dropdown-item" to={"/logindemo"}>
+                  Login Demo
+                </NavLink>
               </div>
             </li>
           </ul>
