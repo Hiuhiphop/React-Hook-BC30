@@ -24,6 +24,11 @@ export default function HeaderHome() {
                 Home <span className="visually-hidden">(current)</span>
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link active" to="antd" aria-current="page">
+                Antd Demo <span className="visually-hidden">(current)</span>
+              </NavLink>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -59,8 +64,15 @@ export default function HeaderHome() {
                 </NavLink>
                 <NavLink className="dropdown-item" to={"/facebookdemo"}>
                   Facebook Demo
-                </NavLink><NavLink className="dropdown-item" to={"/logindemo"}>
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/logindemo"}>
                   Login Demo
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/usesearchparam"}>
+                  Use Param Demo
+                </NavLink>
+                <NavLink className="dropdown-item" to={"/useroutescustomhook"}>
+                  Use Routes Demo (custom Hook)
                 </NavLink>
               </div>
             </li>

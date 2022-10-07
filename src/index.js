@@ -14,6 +14,13 @@ import UseRefDemo from "./page/HookDemo/UseRef/UseRefDemo";
 import NumberDemo from "./page/HookDemo/useRedux/numberDemo/NumberDemo";
 import DemoFaceBookApp from "./page/HookDemo/useRedux/DemoFacebookApp/DemoFaceBookApp";
 import LoginDemo from "./page/HookDemo/UseHookRouter/LoginDemo";
+import Home from "./page/HookDemo/UseHookRouter/DemoUseParams/Home";
+import Details from "./page/HookDemo/UseHookRouter/DemoUseParams/Details";
+import DemoUseSearchParam from "./page/HookDemo/UseHookRouter/DemoUseSearchParams/DemoUseSearchParam";
+import DemoUseRoutes from "./page/HookDemo/CustomHook/DemoUseRoutes";
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+import AntdDemo from "./page/Antd demo/AntdDemo";
+import './assets/scss/main.scss'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,6 +37,13 @@ root.render(
           <Route path="numberdemo" element={<NumberDemo />}></Route>
           <Route path="facebookdemo" element={<DemoFaceBookApp />}></Route>
           <Route path="logindemo" element={<LoginDemo />}></Route>
+          <Route index element={<Home />}></Route>
+          <Route path="detail">
+            <Route path=":id" element={<Details />}></Route>
+          </Route>
+          <Route path="usesearchparam" element={<DemoUseSearchParam />}></Route>
+          <Route path="useroutescustomhook" element={<DemoUseRoutes/>}></Route>
+          <Route path="antd" element={<AntdDemo/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

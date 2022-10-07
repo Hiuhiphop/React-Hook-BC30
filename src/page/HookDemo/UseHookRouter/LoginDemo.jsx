@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { history } from "../../App";
 import { useNavigate } from "react-router-dom";
 export default function ReactForm(props) {
   const navigate = useNavigate();
@@ -16,19 +15,30 @@ export default function ReactForm(props) {
   const handleSubmit = async (e) => {
     e.preventDefault(); //Chặn reload browser
     console.log(userLoginRef.current);
-    let promise = new Promise((resolve) => {
+    let promise = new Promise((resolve, errFunc) => {
       setTimeout(() => {
         console.log("Đăng nhập api");
-        resolve("Đăng nhập thành công");
+        if (userLoginRef.current.userName === "lethanhhieu") {
+          resolve("Đăng nhập thành công");
+        } else {
+          errFunc("Đăng nhập thất bại");
+        }
       }, 3000);
     });
-    let result = await promise;
-    console.log(result);
-    navigate("home");
-    //Có replace : là k lưu lại lịch sử khi back trang
-    //Không có replace là lưu lại lịch sử khi back trang
-    // history.push('/');
+    // let result = await promise;
+    // console.log(result);
+    // navigate("home");
+    // //Có replace : là k lưu lại lịch sử khi back trang
+    // //Không có replace là lưu lại lịch sử khi back trang
+    // // history.push('/');
+    promise.then((result) => {
+      navigate("/");
+    });
+    promise.catch((err) => {
+      console.log(err);
+    });
   };
+
   return (
     <form className="container" onSubmit={handleSubmit}>
       <h3>Login</h3>
