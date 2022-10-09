@@ -29,6 +29,11 @@ export default function HeaderHome() {
                 Antd Demo <span className="visually-hidden">(current)</span>
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link active" to="login" aria-current="page">
+                Login (token) <span className="visually-hidden">(current)</span>
+              </NavLink>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"

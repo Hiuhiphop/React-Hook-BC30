@@ -21,6 +21,7 @@ import DemoUseRoutes from "./page/HookDemo/CustomHook/DemoUseRoutes";
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import AntdDemo from "./page/Antd demo/AntdDemo";
 import './assets/scss/main.scss'
+import Login from "./page/Login/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -44,6 +45,7 @@ root.render(
           <Route path="usesearchparam" element={<DemoUseSearchParam />}></Route>
           <Route path="useroutescustomhook" element={<DemoUseRoutes/>}></Route>
           <Route path="antd" element={<AntdDemo/>}></Route>
+          <Route path="login" element={<Login/>}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

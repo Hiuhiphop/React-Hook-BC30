@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import { getProduct } from "../../../../redux/reducer/productReducer";
+import { getProductAction, getProductApi } from "../../../../redux/reducer/productReducer";
 
 export default function Home() {
   // const [arrProduct, setArrProduct] = useState([]);
@@ -10,21 +10,9 @@ export default function Home() {
   const { arrProduct } = useSelector((state) => state.productReducer);
   const dispatch = useDispatch();
 
-  const navigate = useNavigate();
-
-  const getAllProductApi = async () => {
-    try {
-      let result = await axios({
-        url: "https://shop.cyberlearn.vn/api/Product",
-        method: "GET",
-      });
-      // Sau khi lấy dữ liệ từ api về và setState
-      console.log(result.data.content);
-      // setArrProduct(result.data.content);
-      dispatch(getProduct(result.data.content));
-    } catch (err) {
-      console.log(err);
-    }
+  const getAllProductApi = () => {
+    const actionThunk = getProductApi();
+    dispatch(actionThunk);
   };
 
   useEffect(() => {
